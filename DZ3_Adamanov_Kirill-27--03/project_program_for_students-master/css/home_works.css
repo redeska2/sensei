@@ -1,0 +1,241 @@
+
+/* GMAIL BLOCK */
+
+.gmail_block {
+    background: black;
+    padding: 100px 0;
+}
+
+.inner_gmail_block {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid orange;
+    height: 300px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.form_gmail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_gmail button {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* MOVE BLOCK */
+
+.move_block {
+    background: black;
+    padding: 100px 0;
+}
+
+.parent_block {
+    height: 500px;
+    width: 500px;
+    border: 2px solid orange;
+    position: relative;
+    margin: 0 auto;
+}
+
+.child_block {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+
+.inner_move_block {
+    margin-top: 50px;
+}
+
+/* STOP WATCH */
+
+.time {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid orange;
+    margin-top: 40px;
+}
+
+.time_block {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.stopwatch {
+    padding: 100px 0;
+    background: black;
+}
+
+.time_buttons {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#parent_block {
+    height: 500px;
+    width: 500px;
+    border: 2px solid orange;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #small_block {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+  /* Общие стили */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Britannic Bold", sans-serif;
+    background: #c2d0d0;
+}
+body.modal-open {
+    overflow: hidden;
+  }
+  
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для мобильных устройств */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+/* Стили для планшетов */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .btn {
+        width: 220px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+/* Стили для настольных устройств */
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .btn {
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* ОБМЕННИК */
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+  }
+  
+  .input-container input {
+    margin-bottom: 30px;
+    background-color: rgb(54, 50, 50);
+    padding: 10px;
+    border: none;
+    color: black;
+    text-align: center;
+    width: 300px; /* Изменим ширину инпутов на 300px */
+  }
+  
+  .input-with-image-container {
+    position: relative;
+    width: 300px; /* Задаем ширину контейнера с изображением такую же, как у второго инпута */
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translate(0, -50%);
+    height: 50px;
+    width: 50px;
+    background-image: url("https://static.life.ru/posts/2014/12/147601/e9dd66df74d145f150329f840ba77e84.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s;
+    z-index: 1;
+  }
+  
+  /* Стиль при активации второго инпута */
+  .dollor:focus ~ .image-overlay {
+    opacity: 1;
+  }
+  
